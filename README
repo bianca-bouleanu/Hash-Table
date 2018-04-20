@@ -1,0 +1,33 @@
+Nume: Oana-Bianca Bouleanu
+Grupa: 333CA
+E-mail: oana.bouleanu@stud.acs.upb.ro
+
+Tema 1 Sisteme de Operare - Hashtable
+
+	Hash table-ul este implementat cu ajutorul listelor inlantuite. Acesta
+este, practic, un vector de bucket-uri, iar fiecare bucket este reprezentat
+printr-o lista simplu-inlantuita(fiecare nod contine o valoare si un pointer
+catre nodul urmator).
+
+	Comenzile se citesc de la tastatura sau din fisierele primite ca argumente.
+Exista o functie care verifica validitatea comenzilor primite(daca exista
+printre cele aplicabile pe hash table) si o functie care aplica functia
+corespunzatoare fiecarei comenzi.
+
+	Comenzi posibile:
+- add word: insereaza un cuvant in hash table
+- remove word: elimina un cuvant din hash table
+- find word output_file: cauta un cuvant in hash table si scrie rezultatul
+						 cautarii in fisierul de output, daca primeste un
+						 astfel de fisier
+- clear: elibereaza hash table-ul
+- print_bucket bucket_index output_file: printeaza bucket-ul bucket_index
+- print output_file: printeaza intregul hash table
+- resize double/halve: dubleaza/injumatateste dimensiunea hash table-ul
+
+	S-a ales implementarea completa a functiei print, pentru a nu deschide
+si inchide fisierul de iesire pentru fiecare bucket al hash table-ului.
+	Pentru returnarea erorilor s-a folosit macro-ul DIE.
+
+	Rulare: ./tema1 marime_hashTable fisiere_input(optionale)
+
